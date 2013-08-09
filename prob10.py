@@ -1,7 +1,7 @@
 from math import sqrt
 
 
-N = 500000
+N = 2000000
 
 lst = [True] * N
 lst[0] = False
@@ -14,5 +14,4 @@ for i in xrange(2, int(sqrt(N)) + 1):
 	for j in xrange(i*i, N, i):
 		lst[j] = False
 
-lst = filter(lambda x : lst[x], range(N))
-print lst[10000]
+print sum(filter(lambda x : lst[x], range(N))) 
