@@ -1,0 +1,1 @@
+print sum([ int(u) for u in str(2 ** 1000) ])
