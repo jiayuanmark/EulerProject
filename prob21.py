@@ -4,7 +4,9 @@ def sum_divisor(num):
 	if num == 1:
 		return 0
 	else:
-		return 1 + sum(map(lambda x : (x + num/x if num % x == 0 else 0), range(2, int(sqrt(num))+1)))
+		ret = 1 + sum(map(lambda x : (x + num/x if num % x == 0 else 0), range(2, int(sqrt(num))+1)))
+		ret = ret - (int(sqrt(num)) if num % sqrt(num) == 0 else 0) 
+		return ret
 
 ans = 0
 for i in xrange(2, 10001):
