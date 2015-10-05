@@ -10,12 +10,12 @@ rev = read . reverse . show
 
 isLychrel :: Integer -> Bool
 isLychrel num = isLychrel' 0 num
-	where isLychrel' i num
-		| i > 50 = True
-		| isPalindrome next = False
-		| otherwise = isLychrel' (i+1) next
-		where next = num + rev num
+  where isLychrel' i num
+    | i > 50 = True
+    | isPalindrome next = False
+    | otherwise = isLychrel' (i+1) next
+    where next = num + rev num
 
 main :: IO ()
 main = do
-	putStrLn $ show $ length $ filter isLychrel [1..10000]
+  putStrLn $ show $ length $ filter isLychrel [1..10000]

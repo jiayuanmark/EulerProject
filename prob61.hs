@@ -23,4 +23,4 @@ octagonal = [ n * (3*n-2) | n <- [1..] ]
 
 
 solve = do
-	
+  
