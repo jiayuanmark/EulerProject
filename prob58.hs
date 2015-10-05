@@ -17,7 +17,7 @@ primeRatio :: Double -> Integer
 primeRatio ratio = primeRatio' 2 0
 	where
 		primeRatio' level count
-			| r < ratio = (2 * level - 1)
+			| r < ratio = 2 * level - 1
 			| otherwise = primeRatio' (level + 1) next
 			where
 				primes = numPrime level
